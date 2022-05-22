@@ -67,9 +67,11 @@ struct get_eprocess get_eprocess_struct = { 0 };
 
 BOOLEAN get_driver_handle()
 {
+	wchar_t driver_name_unicode[] = { 0x5c , 0x5c , 0x2e , 0x5c , 0x51 , 0x6f , 0x69 , 0x6e , 0x6b , 0x79 , 0x44 , 0x6f , 0x69 , 0x6e , 0x6b, 0x00 };
+
 	driver_handle = CreateFileW
 	(
-		L"\\\\.\\QoinkyDoink"
+		(LPCWSTR)&driver_name_unicode
 		, GENERIC_READ | GENERIC_WRITE
 		, FILE_SHARE_READ | FILE_SHARE_WRITE
 		, NULL
