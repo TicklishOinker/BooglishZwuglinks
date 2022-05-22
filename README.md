@@ -7,7 +7,7 @@ Usermode interface: Frigabriggle.h
 Features:  
 Get process base address  
 Get EPROCESS address  
-Copy Memory  
+Copy memory  
 
 Security features:  
 Creates strings on the stack (Both in driver and usermode interface)  
